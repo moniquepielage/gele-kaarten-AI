@@ -1,4 +1,5 @@
 ⚽ Football Yellow Cards AI Assistant
+
 In my quest to practice my python I've been asking people for projects. My oldest son asked me for this one. Originally, he wanted it on the Dutch competition. the request made me realise some things to consider when planning projects.... first of all, a lot of databases cost money. To circumvent this, I searched for free data I could use. I hit problem number 2: free data is not very extensive. So I switched to a free data set with limitations, seeing this is only to practice. And I had to change to the Premier League 
 
 This project is an AI-powered assistant designed to answer natural language questions (Dutch/English) regarding football statistics. The assistant utilizes the Gemini 2.5 Flash API to convert user queries into SQL queries, which are then executed against a local SQLite database containing Premier League data.
