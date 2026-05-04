@@ -61,7 +61,7 @@ def vraag_ai_om_sql(gebruikers_vraag, tabel_naam):
 def start_assistent():
     # --- INSTELLINGEN ---
     db_bestand = 'premier_league_test.db' 
-    tabel_naam = 'overzicht_gele_kaarten' # Jouw gecombineerde tabel/view
+    tabel_naam = 'overzicht_gele_kaarten' # gecombineerde tabel/view
     
     # Controleer of de database bestaat
     if not os.path.exists(db_bestand):
