@@ -2,6 +2,7 @@
 
 In my quest to practice my python I've been asking people for projects. My oldest son asked me for this one. Originally, he wanted it on the Dutch competition. the request made me realise some things to consider when planning projects.... first of all, a lot of databases cost money. To circumvent this, I searched for free data I could use. I hit problem number 2: free data is not very extensive. So I switched to a free data set with limitations, seeing this is only to practice. And I had to change to the Premier League 
 
+
 This project is an AI-powered assistant designed to answer natural language questions (Dutch/English) regarding football statistics. The assistant utilizes the Gemini 2.5 Flash API to convert user queries into SQL queries, which are then executed against a local SQLite database containing Premier League data.
 
 🚀 Features
@@ -22,26 +23,23 @@ cd voetbal-kaarten-ai
 Install the required Python libraries:
 
 Bash
-    pip install soccerdata pandas google-generativeai python-dotenv
-    ```
+pip install soccerdata pandas google-generativeai python-dotenv
+Configure your API Key:
 
-3.  **Configure your API Key:**
-    *   Create a file named `.env` in the root directory.
-    *   Add your Google Gemini API key:
-    
-```plaintext
-    GEMINI_API_KEY=your_api_key_here
-    ```
+Create a file named .env in the root directory.
 
-4.  **Prepare the Database:**
-    *   Ensure the SQLite database `premier_league_test.db` is present, containing the table/view `overzicht_gele_kaarten`.
+Add your Google Gemini API key:
 
----
+Plaintext
+GEMINI_API_KEY=your_api_key_here
+Prepare the Database:
 
-## 📈 Usage
+Ensure the SQLite database premier_league_test.db is present, containing the table/view overzicht_gele_kaarten.
 
+📈 Usage
 Start the assistant by running the main file:
-```bash
+
+Bash
 python informatie_ophalen.py
 Example Questions:
 
@@ -56,6 +54,12 @@ informatie_ophalen.py: The main application and AI logic.
 
 check_models.py: Helper script to verify available Gemini models.
 
+.env: (Not included) Contains secret API keys.
+
+premier_league_test.db: Local database with match and player data.
+
+⚖️ License
+This project was created for educational purposes. Data is sourced from FBref via Soccerdata.
 .env: (Not included) Contains secret API keys.
 
 premier_league_test.db: Local database with match and player data.
