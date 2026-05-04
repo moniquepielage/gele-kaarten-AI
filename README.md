@@ -1,4 +1,4 @@
-markdown
+
 ⚽ Football Yellow Cards AI Assistant
 
 In my quest to practice my python I've been asking people for projects. My oldest son asked me for this one. Originally, he wanted it on the Dutch competition. the request made me realise some things to consider when planning projects.... first of all, a lot of databases cost money. To circumvent this, I searched for free data I could use. I hit problem number 2: free data is not very extensive. So I switched to a free data set with limitations, seeing this is only to practice. And I had to change to the Premier League 
@@ -14,6 +14,7 @@ Automated Data: Fetches football data via the Soccerdata library (FBref).
 SQLite Integration: Efficiently stores data in a structured database.
 
 Security: Uses environment variables (.env) to protect API keys.
+
 
 
 🛠️ Installation
@@ -38,6 +39,7 @@ Prepare the Database:
 
 Ensure the SQLite database premier_league_test.db is present, containing the table/view overzicht_gele_kaarten.
 
+
 📈 Usage
 Start the assistant by running the main file:
 
@@ -51,6 +53,7 @@ Example Questions:
 
 "What was the average number of yellow cards per match?"
 
+
 📂 Project Structure
 informatie_ophalen.py: The main application and AI logic.
 
@@ -60,11 +63,11 @@ check_models.py: Helper script to verify available Gemini models.
 
 premier_league_test.db: Local database with match and player data.
 
+
 ⚖️ License
 This project was created for educational purposes. Data is sourced from FBref via Soccerdata.
 .env: (Not included) Contains secret API keys.
 
 premier_league_test.db: Local database with match and player data.
 
-⚖️ License
-This project was created for educational purposes. Data is sourced from FBref via Soccerdata.
+
