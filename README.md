@@ -1,56 +1,63 @@
-Markdown
-# ⚽ Voetbal Gele Kaarten AI Assistent
+⚽ Football Yellow Cards AI Assistant
+In my quest to practice my python I've been asking people for projects. My oldest son asked me for this one. Originally, he wanted it on the Dutch competition. the request made me realise some things to consider when planning projects.... first of all, a lot of databases cost money. To circumvent this, I searched for free data I could use. I hit problem number 2: free data is not very extensive. So I switched to a free data set with limitations, seeing this is only to practice. And I had to change to the Premier League 
 
-Dit project is een AI-gestuurde assistent die natuurlijke taalvragen (Nederlands) beantwoordt over voetbalstatistieken. De assistent gebruikt de **Gemini 2.5 Flash API** om vragen om te zetten in SQL-queries, die vervolgens worden uitgevoerd op een lokale SQLite database met Premier League data.
+This project is an AI-powered assistant designed to answer natural language questions (Dutch/English) regarding football statistics. The assistant utilizes the Gemini 2.5 Flash API to convert user queries into SQL queries, which are then executed against a local SQLite database containing Premier League data.
 
-## 🚀 Functionaliteiten
-- **Natuurlijke Taal naar SQL:** Stel vragen zoals "Welke scheidsrechter gaf de meeste kaarten?" zonder zelf SQL te hoeven schrijven.
-- **Geautomatiseerde Data:** Haalt voetbaldata op via de `Soccerdata` bibliotheek (FBref).
-- **SQLite Integratie:** Slaat data efficiënt op in een gestructureerde database.
-- **Veiligheid:** Gebruikt omgevingsvariabelen (`.env`) om API-sleutels te beschermen.
+🚀 Features
+Natural Language to SQL: Ask questions like "Which referee issued the most cards?" without needing to write SQL yourself.
 
-## 🛠️ Installatie
+Automated Data: Fetches football data via the Soccerdata library (FBref).
 
-1. **Clone de repository:**
-   ```bash
-   git clone [https://github.com/moniquepielage/voetbal-kaarten-ai.git](https://github.com/jouwnaam/voetbal-kaarten-ai.git)
-   cd voetbal-kaarten-ai
-Installeer de benodigde Python-bibliotheken:
+SQLite Integration: Efficiently stores data in a structured database.
+
+Security: Uses environment variables (.env) to protect API keys.
+
+🛠️ Installation
+Clone the repository:
 
 Bash
-   pip install soccerdata pandas google-generativeai python-dotenv
-Configureer je API Key:
-
-Maak een bestand aan genaamd .env in de hoofdmap.
-
-Voeg je Google Gemini API key toe:
-
-Plaintext
-GEMINI_API_KEY=jouw_api_key_hier
-Database voorbereiden:
-
-Zorg dat de SQLite database premier_league_test.db aanwezig is met de tabel/view overzicht_gele_kaarten.
-
-📈 Gebruik
-Start de assistent door het hoofdbestand uit te voeren:
+git clone https://github.com/moniquepielage/voetbal-kaarten-ai.git
+cd voetbal-kaarten-ai
+Install the required Python libraries:
 
 Bash
-python #informatie_ophalen.py
-Voorbeeldvragen:
-"Wie gaf de meeste gele kaarten in het seizoen 2023-2024?"
+    pip install soccerdata pandas google-generativeai python-dotenv
+    ```
 
-"Welke speler van Arsenal heeft de meeste kaarten?"
+3.  **Configure your API Key:**
+    *   Create a file named `.env` in the root directory.
+    *   Add your Google Gemini API key:
+    
+```plaintext
+    GEMINI_API_KEY=your_api_key_here
+    ```
 
-"Hoeveel gele kaarten vielen er gemiddeld per wedstrijd?"
+4.  **Prepare the Database:**
+    *   Ensure the SQLite database `premier_league_test.db` is present, containing the table/view `overzicht_gele_kaarten`.
 
-📂 Projectstructuur
-#informatie_ophalen.py: De hoofdapplicatie en AI-logica.
+---
 
-check_models.py: Hulpscript om beschikbare Gemini-modellen te controleren.
+## 📈 Usage
 
-.env: (Niet meegeleverd) Bevat de geheime API-sleutels.
+Start the assistant by running the main file:
+```bash
+python informatie_ophalen.py
+Example Questions:
 
-premier_league_test.db: De lokale database met wedstrijd- en spelersgegevens.
+"Who gave the most yellow cards in the 2023-2024 season?"
 
-⚖️ Licentie
-Dit project is gemaakt voor educatieve doeleinden. Data is afkomstig van FBref via Soccerdata.
+"Which Arsenal player has the most cards?"
+
+"What was the average number of yellow cards per match?"
+
+📂 Project Structure
+informatie_ophalen.py: The main application and AI logic.
+
+check_models.py: Helper script to verify available Gemini models.
+
+.env: (Not included) Contains secret API keys.
+
+premier_league_test.db: Local database with match and player data.
+
+⚖️ License
+This project was created for educational purposes. Data is sourced from FBref via Soccerdata.
