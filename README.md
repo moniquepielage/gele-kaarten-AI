@@ -1,3 +1,4 @@
+markdown
 ⚽ Football Yellow Cards AI Assistant
 
 In my quest to practice my python I've been asking people for projects. My oldest son asked me for this one. Originally, he wanted it on the Dutch competition. the request made me realise some things to consider when planning projects.... first of all, a lot of databases cost money. To circumvent this, I searched for free data I could use. I hit problem number 2: free data is not very extensive. So I switched to a free data set with limitations, seeing this is only to practice. And I had to change to the Premier League 
@@ -13,6 +14,7 @@ Automated Data: Fetches football data via the Soccerdata library (FBref).
 SQLite Integration: Efficiently stores data in a structured database.
 
 Security: Uses environment variables (.env) to protect API keys.
+
 
 🛠️ Installation
 Clone the repository:
